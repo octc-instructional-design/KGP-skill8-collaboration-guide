@@ -88,3 +88,5 @@ This site was converted from the Blackboard organization **"10ES Collaboration W
   - The template pages (7.1–7.4) have no rest stops and read as one form.
   - Fixed the spots where tables, notes, and boxes touched the content next to them.
 - **Links back to the main site.** "All 10 Skills" in the header now opens the main Essential Skills site in the same tab, as the parent of this guide. Breadcrumbs now run All 10 Skills › Skill 8 Guide › Chapter › Section.
+- **Capsules.** The "Builds 8.x" capsules on the activity cards and the indicator capsules on the Group Contract now sit in the top-right corner of their boxes.
+- **8.1 Blackboard help.** The link now goes straight to Blackboard's Groups help page, with direct links to Create and Manage Groups, Group Assignments, and Group Discussions. Before, it went to the general instructor help home.

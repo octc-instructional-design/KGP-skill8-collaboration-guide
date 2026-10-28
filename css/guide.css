@@ -1045,6 +1045,35 @@ footer a {
 .print-chapter-head .chapter-num { width: 34px; height: 34px; font-size: 1.05rem; }
 
 
+/* ---------- C5. Capsules sit in the top-right corner of their box ---------- */
+
+.guide-content .activity { position: relative; }
+.guide-content .activity > h3 { padding-right: 110px; }
+.guide-content .activity > .builds {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  margin: 0;
+}
+
+.guide-content .item { position: relative; }
+.guide-content .item > .h2wrap { padding-right: 64px; }
+.guide-content .item .tag {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  margin: 0;
+}
+
+/* direct help links on 8.1 and 8.2 */
+.guide-content .help-links {
+  margin: 0 0 14px;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 4px;
+}
+
+
 /* =========================================================
    Part D. Vertical rhythm
    One spacing scale for the reading column, so gaps between
