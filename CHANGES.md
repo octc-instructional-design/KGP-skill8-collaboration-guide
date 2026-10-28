@@ -90,3 +90,10 @@ This site was converted from the Blackboard organization **"10ES Collaboration W
 - **Links back to the main site.** "All 10 Skills" in the header now opens the main Essential Skills site in the same tab, as the parent of this guide. Breadcrumbs now run All 10 Skills › Skill 8 Guide › Chapter › Section.
 - **Capsules.** The "Builds 8.x" capsules on the activity cards and the indicator capsules on the Group Contract now sit in the top-right corner of their boxes.
 - **8.1 Blackboard help.** The link now goes straight to Blackboard's Groups help page, with direct links to Create and Manage Groups, Group Assignments, and Group Discussions. Before, it went to the general instructor help home.
+
+## Licensing removed for the draft stage (October 28, 2026)
+
+- The Creative Commons license is withdrawn while the guide is an in-house draft. `LICENSE.md` is removed.
+- The footer now reads "Draft for review · © 2026 KCTCS."
+- The home page's "Use and adapt it" box is replaced with a Status note.
+- The README explains that reuse beyond KCTCS hasn't been decided, and names who decides under KCTCS Administrative Policy 3.3.5.

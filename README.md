@@ -40,11 +40,9 @@ CHANGES.md      what changed from the Blackboard version
 
 It's plain HTML and CSS, with no build step and no framework. Edit any page in a text editor, commit the change, and GitHub Pages republishes it within a minute or two.
 
-## Adapting this guide for your college
+## Adapting this guide (for later)
 
-You're welcome to copy this guide and make it your own under the license below. Click **Use this template** at the top of the repository. You'll get your own independent copy with no history.
-
-Then work through these steps:
+The guide is an in-house draft, and it isn't open for reuse outside KCTCS yet (see **Status and permissions** below). These notes are here for when that's decided. They cover what a college would change to make its own copy:
 
 1. **Swap the logos.** Replace the files in `images/` and keep the file names:
    - `kctcs-horiz-reverse.png` is the white-text logo for the navy header and footer.
@@ -67,10 +65,12 @@ Then work through these steps:
 - **Refreshing styles.** After you change a stylesheet, bump the version number in its link on every page (`guide.css?v=1` becomes `?v=2`; the same goes for `book.js`) so browsers load the new file.
 - **Previewing.** Open a page in a browser before committing. The full-guide print page loads the other pages, so preview it on the published site or run a local server (`python3 -m http.server` in this folder). Opening it straight from your computer won't work.
 
-## License
+## Status and permissions
 
-The guide's content is licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/). You may share and adapt it for noncommercial purposes. Credit the original, and release your adaptation under the same license. See [`LICENSE.md`](LICENSE.md).
+**Draft for review, in-house resource.** © 2026 Kentucky Community and Technical College System. The guide is for KCTCS faculty and staff. No license for reuse outside KCTCS has been granted yet.
 
-The license does **not** cover the KCTCS name and logos. Those are trademarks, so replace them in your adaptation. The CPE rubric language belongs to the Kentucky Council on Postsecondary Education.
+The repository is public so that GitHub Pages can publish the site. Being public doesn't grant permission to copy or adapt the content.
 
-**Suggested credit:** *Adapted from "Designing Collaboration That Works: A Faculty Guide to Essential Skill 8," KCTCS Online Learning Peer Team, licensed CC BY-NC-SA 4.0.*
+If the guide is later shared beyond KCTCS, the terms will be decided with the appropriate KCTCS offices. Under KCTCS Administrative Policy 3.3.5 (Intellectual Property), the Intellectual Property Committee administers the policy, and each college's Chief Academic Officer is the first contact. When the terms are set, a `LICENSE` file will be added here.
+
+The CPE rubric language belongs to the Kentucky Council on Postsecondary Education. The KCTCS name and logos are KCTCS trademarks.
