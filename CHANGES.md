@@ -71,3 +71,20 @@ This site was converted from the Blackboard organization **"10ES Collaboration W
   - Boxes no longer carry side or top accent bars. The one exception is the activity cards on the level pages, where the bar's shade still marks the level.
   - List items have no divider lines.
   - Tables use horizontal rules only.
+
+## Color, spacing, and site links (October 28, 2026, second revision)
+
+- **Chapter banners.** Every chapter page (1.0–10.0) opens with a navy banner showing a sky-blue chapter number and the Skill 8 coin.
+- **Level colors.** The four levels use one scale from the KCTCS palette, getting darker as the level gets bigger: PMS 298 sky (Quick), PMS 300 (Structured), KCTCS Blue (Coordinated), and PMS 282 navy (Sustained). The scale appears in five places:
+  - the 4.0 chart and level cards
+  - the 1.0 range
+  - the 3.0 reach table
+  - the activity cards and idea banks
+  - a four-step meter under the title of each level page and both exemplars
+- **Teaching-format colors.** Each format has its own color: gold for in person, sky for online, and PMS 300 for hybrid. The colors appear on the indicator cards (3.1–3.4), in the 2.0 tables, and in the setting rows on 4.1–4.3.
+- **Even spacing.**
+  - Blocks within a part of a page are 36px apart.
+  - A rest stop marks each new titled section.
+  - The template pages (7.1–7.4) have no rest stops and read as one form.
+  - Fixed the spots where tables, notes, and boxes touched the content next to them.
+- **Links back to the main site.** "All 10 Skills" in the header now opens the main Essential Skills site in the same tab, as the parent of this guide. Breadcrumbs now run All 10 Skills › Skill 8 Guide › Chapter › Section.

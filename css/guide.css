@@ -424,11 +424,11 @@ footer a {
    Part B. Content components (from the Blackboard pages, restyled)
    ========================================================= */
 
-:root { --level: var(--brand-blue); }
-.level-1 { --level: #8fa8c4; }
-.level-2 { --level: #5c82ab; }
-.level-3 { --level: #2e5e8c; }
-.level-4 { --level: var(--brand-blue); }
+:root { --level: var(--blue); }
+.level-1 { --level: var(--lv1); }
+.level-2 { --level: var(--lv2); }
+.level-3 { --level: var(--lv3); }
+.level-4 { --level: var(--lv4); }
 
 /* Reset at zero specificity so the site components (tips panel, lists) keep their spacing */
 :where(.guide-content) :where(*) { margin: 0; padding: 0; }
@@ -581,9 +581,9 @@ footer a {
 .guide-content .band-card ul li::before { content: "\2192"; font-weight: 800; position: absolute; left: 2px; top: 5px; color: var(--accent-ink); }
 .guide-content .band-card .assess { font-size: 0.867rem; line-height: 1.6; color: #444444; background: var(--surface-alt); padding: 8px 12px; border-radius: 3px; }
 .guide-content .band-card .assess strong { color: var(--brand-blue); }
-.guide-content .quick { border-left-color: var(--level); }
-.guide-content .structured { border-left-color: var(--level); }
-.guide-content .coordinated { border-left-color: var(--level); }
+.guide-content .quick { border-left-color: var(--lv1); }
+.guide-content .structured { border-left-color: var(--lv2); }
+.guide-content .coordinated { border-left-color: var(--lv3); }
 .guide-content .sustained { border-left-color: var(--brand-blue); }
 .guide-content .steps { list-style: none; padding: 0; counter-reset: step; }
 .guide-content .steps li { position: relative; padding: 4px 0 14px 44px; counter-increment: step; }
@@ -606,7 +606,7 @@ footer a {
 .guide-content .boundary li { font-size: 0.933rem; line-height: 1.6; padding: 7px 0 7px 24px; position: relative; }
 .guide-content .boundary li:last-child { border-bottom: none; }
 .guide-content .boundary li::before { content: "\2713"; color: var(--brand-blue); font-weight: 800; position: absolute; left: 2px; top: 7px; }
-.guide-content .bridge { background: #eef2f7; border: 1px dashed var(--level); padding: 12px 16px; margin-top: 12px; font-size: 0.9rem; line-height: 1.6; color: #333333; }
+.guide-content .bridge { background: #eef2f7; border: 1px dashed var(--lv3); padding: 12px 16px; margin-top: 12px; font-size: 0.9rem; line-height: 1.6; color: #333333; }
 .guide-content .bridge strong { color: var(--brand-blue); }
 .guide-content .parts { counter-reset: part; }
 .guide-content .decision { border: 1px solid var(--border); padding: 14px 18px 14px 58px; margin-bottom: 14px; position: relative; }
@@ -718,7 +718,7 @@ footer a {
 .guide-content .idea-list li:last-child { border-bottom: none; }
 .guide-content .idea-list li::before { content: "\2192"; font-weight: 800; position: absolute; left: 2px; top: 7px; color: var(--accent-ink); }
 .guide-content .idea-list li strong { color: var(--brand-blue); }
-.guide-content .idea-list li .field { color: var(--level); }
+.guide-content .idea-list li .field { color: var(--lv3); }
 .guide-content .idea-list li .engine { display: block; margin-top: 3px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #6b6b6b; }
 .guide-content .scenario { background: var(--surface-alt); padding: 16px 20px; margin-bottom: 12px; border-radius: 12px; }
 .guide-content .scenario p { margin: 0; }
@@ -774,3 +774,351 @@ footer a {
   .guide-content .idea-list li { page-break-inside: avoid; }
 }
 
+
+
+/* =========================================================
+   Part C. Color with a job
+   Three color systems, all from the KCTCS palette:
+   1. Chapter banners mark where each chapter starts.
+   2. Level scale: Quick → Sustained gets darker
+      (PMS 298 sky → PMS 300 → KCTCS Blue → PMS 282 navy).
+   3. Teaching format: in person = gold, online = sky,
+      hybrid = PMS 300. Same tint everywhere it appears.
+   Text never sits on the sky or gold fills; those are
+   shapes only (KCTCS color-combination guide).
+   ========================================================= */
+
+:root {
+  --lv1: var(--sky);      /* Quick */
+  --lv2: #005cb8;         /* Structured  (PMS 300) */
+  --lv3: var(--blue);     /* Coordinated (KCTCS Blue) */
+  --lv4: var(--navy);     /* Sustained   (PMS 282) */
+
+  --fmt-person: var(--gold);
+  --fmt-person-soft: #fff5dc;
+  --fmt-online: var(--sky);
+  --fmt-online-soft: #e3f4fc;
+  --fmt-hybrid: #005cb8;
+  --fmt-hybrid-soft: #e8f0fa;
+}
+
+
+/* ---------- C1. Chapter banners ---------- */
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--blue) 0%, var(--dark-blue) 55%, var(--navy) 100%);
+  color: #fff;
+}
+
+/* thin horizontal band at the foot of the banner (brand patterns run horizontal) */
+.banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--sky) 0 50%, var(--gold) 50% 100%);
+}
+
+.banner .inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 40px 40px 46px 316px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.chapter-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: #bfe6f7;
+  font-size: .85rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.chapter-num {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--sky);
+  color: var(--navy);
+  font-size: 1.35rem;
+  letter-spacing: 0;
+}
+
+.banner h1 {
+  margin: 14px 0 10px;
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.1;
+  max-width: 22ch;
+}
+
+.banner .tagline {
+  margin: 0;
+  max-width: 56ch;
+  color: #d6eefa;
+  font-size: 1.12rem;
+}
+
+.banner-coin {
+  width: 128px;
+  height: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, .3));
+}
+
+.chapter-opener .reading > .row.wide:first-of-type .main:empty {
+  display: none;
+}
+
+
+/* ---------- C2. Level scale ---------- */
+
+/* Meter in the header of level pages: four segments, filled up to the level */
+.level-meter {
+  display: inline-flex;
+  gap: 3px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.level-meter i {
+  width: 22px;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--border);
+}
+
+.level-meter .lv-1.on { background: var(--lv1); }
+.level-meter .lv-2.on { background: var(--lv2); }
+.level-meter .lv-3.on { background: var(--lv3); }
+.level-meter .lv-4.on { background: var(--lv4); }
+
+.lesson-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+
+/* 1.0: the four-step range */
+.guide-content .scale .step {
+  border-top: 6px solid var(--border);
+  border-radius: 4px 4px 12px 12px;
+}
+
+.guide-content .scale .step:nth-child(1) { border-top-color: var(--lv1); }
+.guide-content .scale .step:nth-child(2) { border-top-color: var(--lv2); }
+.guide-content .scale .step:nth-child(3) { border-top-color: var(--lv3); }
+.guide-content .scale .step:nth-child(4) { border-top-color: var(--lv4); }
+
+/* 4.0: the level cards */
+.guide-content .band-card { border-radius: 4px 12px 12px 4px; }
+.guide-content .band-card.quick { border-left-color: var(--lv1); }
+.guide-content .band-card.structured { border-left-color: var(--lv2); }
+.guide-content .band-card.coordinated { border-left-color: var(--lv3); }
+.guide-content .band-card.sustained { border-left-color: var(--lv4); }
+
+.guide-content .band-card .chip { color: #fff; }
+.guide-content .band-card.quick .chip { background: var(--lv1); color: var(--navy); }
+.guide-content .band-card.structured .chip { background: var(--lv2); }
+.guide-content .band-card.coordinated .chip { background: var(--lv3); }
+.guide-content .band-card.sustained .chip { background: var(--lv4); }
+
+/* 3.0: reach table columns carry their level color on top */
+.guide-content .reach-table thead th {
+  background: var(--soft-blue);
+  color: var(--navy);
+  border-top: 6px solid var(--border);
+}
+
+.guide-content .reach-table thead th:nth-child(2) { border-top-color: var(--lv1); }
+.guide-content .reach-table thead th:nth-child(3) { border-top-color: var(--lv2); }
+.guide-content .reach-table thead th:nth-child(4) { border-top-color: var(--lv3); }
+.guide-content .reach-table thead th:nth-child(5) { border-top-color: var(--lv4); }
+
+/* Level pages: activity cards and idea-bank headings take the page's level */
+.guide-content .activity { border-left-color: var(--level); border-radius: 4px 12px 12px 4px; }
+.guide-content .cluster h3 { border-left: 5px solid var(--level); }
+.guide-content .idea-list li .field { color: var(--navy); }
+
+
+/* ---------- C3. Teaching format ---------- */
+
+/* Indicator cards (3.1–3.4): In Person · Online · Hybrid */
+.guide-content .modality-card {
+  border-top: 6px solid var(--border);
+  border-radius: 4px 4px 12px 12px;
+}
+
+.guide-content .modality-card:nth-child(1) { background: var(--fmt-person-soft); border-top-color: var(--fmt-person); }
+.guide-content .modality-card:nth-child(2) { background: var(--fmt-online-soft); border-top-color: var(--fmt-online); }
+.guide-content .modality-card:nth-child(3) { background: var(--fmt-hybrid-soft); border-top-color: var(--fmt-hybrid); }
+
+/* 2.0 tables: one column per format */
+.guide-content .modality-table thead th {
+  background: var(--soft-blue);
+  color: var(--navy);
+  border-top: 6px solid var(--border);
+}
+
+.guide-content .modality-table thead th:nth-child(2) { background: var(--fmt-person-soft); border-top-color: var(--fmt-person); }
+.guide-content .modality-table thead th:nth-child(3) { background: var(--fmt-online-soft); border-top-color: var(--fmt-online); }
+.guide-content .modality-table thead th:nth-child(4) { background: var(--fmt-hybrid-soft); border-top-color: var(--fmt-hybrid); }
+
+/* Level pages (4.1–4.3): the setting label shows the format */
+.guide-content td.setting {
+  background: var(--fmt-online-soft);
+  box-shadow: inset 5px 0 0 var(--fmt-online);
+  padding-left: 16px;
+}
+
+.guide-content tr:first-child td.setting {
+  background: var(--fmt-person-soft);
+  box-shadow: inset 5px 0 0 var(--fmt-person);
+}
+
+/* async stays highlighted as the case faculty most need, now in the online color */
+.guide-content tr.async td { background: #f3fafe; }
+.guide-content tr.async td.setting { background: var(--fmt-online-soft); }
+
+
+/* ---------- C4. Smaller screens and print ---------- */
+
+@media (max-width: 900px) {
+  .banner .inner {
+    padding: 30px 16px 38px;
+  }
+
+  .banner-coin {
+    width: 84px;
+  }
+}
+
+@media (max-width: 560px) {
+  .banner-coin {
+    display: none;
+  }
+}
+
+@media print {
+  .banner {
+    background: none;
+    color: var(--ink);
+  }
+
+  .banner::after,
+  .banner-coin {
+    display: none;
+  }
+
+  .banner .inner {
+    padding: 0 0 12px;
+  }
+
+  .banner h1,
+  .banner .tagline,
+  .chapter-kicker {
+    color: var(--ink);
+  }
+}
+
+/* Chapter titles inside the full-guide print page */
+.print-chapter-head .chapter-kicker { color: var(--accent-ink); }
+.print-chapter-head h1 { margin: 8px 0 8px; font-size: 2.2rem; }
+.print-chapter-head .tagline { color: var(--blue); font-size: 1.15rem; margin: 0 0 24px; }
+.print-chapter-head .chapter-num { width: 34px; height: 34px; font-size: 1.05rem; }
+
+
+/* =========================================================
+   Part D. Vertical rhythm
+   One spacing scale for the reading column, so gaps between
+   blocks don't depend on which original page they came from.
+     36px  between blocks in the same part of a page
+     rest  (about 96px) before a new titled section
+     16px  between fill-in items on the template pages
+   ========================================================= */
+
+.guide-content > * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.guide-content > * + * {
+  margin-top: 36px !important;
+}
+
+.guide-content > .rest,
+.guide-content > * + .rest {
+  margin-top: 48px !important;
+  margin-bottom: 0 !important;
+}
+
+.guide-content > .rest + * {
+  margin-top: 40px !important;
+}
+
+/* closing "where to go next" line sits close to the panel above it */
+.guide-content > .tips-section + .nav-note,
+.guide-content > .section + .nav-note {
+  margin-top: 20px !important;
+}
+
+/* last block inside a section never adds its own bottom gap */
+.guide-content .section > :last-child,
+.guide-content .modality-section > :last-child {
+  margin-bottom: 0;
+}
+
+/* tables need air on both sides */
+.guide-content .table-wrap {
+  margin-top: 14px;
+  margin-bottom: 16px;
+}
+
+.guide-content .section > .table-wrap:last-child {
+  margin-bottom: 0;
+}
+
+/* template pages (7.1–7.4): form parts stack closely */
+.guide-content > .item + .item,
+.guide-content > .field + .field,
+.guide-content > .field + .item,
+.guide-content > .item + .field,
+.guide-content > .open-q + .open-q {
+  margin-top: 16px !important;
+}
+
+/* heading to its content */
+.guide-content .h2wrap {
+  margin-bottom: 16px;
+}
+
+.guide-content > .h2wrap + * {
+  margin-top: 16px !important;
+}
+
+/* inside a section: boxes, lists, and notes keep a small gap from their neighbors */
+.guide-content .section > :is(ul, ol, div, .table-wrap) + *,
+.guide-content .section > * + :is(div, ul, ol) {
+  margin-top: 16px;
+}
+
+.guide-content .section > .h2wrap + * {
+  margin-top: 0;
+}
