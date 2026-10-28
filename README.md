@@ -31,8 +31,9 @@ The guide is part of the [Essential Skills Faculty Guide](https://octc-instructi
 index.html      home page and contents
 print.html      the whole guide on one page, for print or PDF
 pages/          one file per section, named by number (4-1-quick-collaboration.html)
-css/styles.css  shared site styles, the same system as the Essential Skills Faculty Guide
-css/guide.css   this guide's layout and content components
+css/styles.css  book layout shared with the FYE 100 Pathfinder Guidebook
+css/guide.css   this guide's additions and content components
+js/book.js      sidebar behavior, section highlighting, new-tab external links
 images/         logos, the Skill 8 coin, and favicons
 CHANGES.md      what changed from the Blackboard version
 ```
@@ -51,7 +52,7 @@ Then work through these steps:
    - `kctcs-vert-color.png` goes on the print cover.
 
    Also update the `alt` text where the logos appear. Search all files for `Kentucky Community and Technical College System`.
-2. **Change the colors.** Edit the tokens in the `:root` block at the top of `css/styles.css`: `--brand-blue`, `--brand-blue-dark`, `--brand-gold`, and their `-soft` tints. Every page reads its colors from these tokens. The only hard-coded shades are the four level colors at the top of the content section of `css/guide.css`.
+2. **Change the colors.** Edit the tokens in the `:root` block at the top of `css/styles.css`: `--blue`, `--dark-blue`, `--navy`, `--sky`, `--gold`, and the soft tints. Every page reads its colors from these tokens. The only hard-coded shades are the four level colors in the content section of `css/guide.css`.
 3. **Update the footer and the equal-opportunity statement.** Each page's footer names the system and carries the KCTCS EEO statement. Search all files for `eeo` and replace the statement with your institution's.
 4. **Check the platform pages (8.1 and 8.2).** Each one ends with a line that reads "Platform behavior last verified: [DATE] · [WHO]." Walk through the steps in your own Blackboard and Teams environment, fix anything that differs, and fill in that line. Guest and dual-credit access to Teams is the claim most likely to differ between campuses.
 5. **Localize the examples.** Comments marked `<!-- LOCALIZE: ... -->` flag examples you may want to replace with local ones, such as a community business or a Kentucky field site.
@@ -61,8 +62,9 @@ Then work through these steps:
 
 ## Editing tips
 
-- **Adding or renaming a page.** Each page has the previous/next arrows, the chapter tabs, and the bottom navigation written into it. If you add or rename a page, update those on its neighbors and on the chapter's other tab pages, then add the page to the `pages` list near the bottom of `print.html`.
-- **Refreshing styles.** After you change a stylesheet, bump the version number in its link on every page (`guide.css?v=1` becomes `?v=2`) so browsers load the new file.
+- **Adding or renaming a page.** Each page has its chapter sidebar and its previous/next buttons written into it. If you add or rename a page, update the sidebar on every page in that chapter and the previous/next buttons on its neighbors, then add the page to the `pages` list near the bottom of `print.html`.
+- **External links** open in a new tab and carry `<span class="sr-only"> (opens in a new tab)</span>`, the same rule as the Pathfinder Guidebook. `js/book.js` enforces the new tab as a backup.
+- **Refreshing styles.** After you change a stylesheet, bump the version number in its link on every page (`guide.css?v=1` becomes `?v=2`; the same goes for `book.js`) so browsers load the new file.
 - **Previewing.** Open a page in a browser before committing. The full-guide print page loads the other pages, so preview it on the published site or run a local server (`python3 -m http.server` in this folder). Opening it straight from your computer won't work.
 
 ## License

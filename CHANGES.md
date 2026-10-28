@@ -53,3 +53,21 @@ This site was converted from the Blackboard organization **"10ES Collaboration W
 - **Tables on phones.** Tables scroll inside a labeled, keyboard-focusable box instead of widening the page.
 - **Table headers.** Empty corner header cells have a screen-reader label.
 - **Section order.** Blackboard listed 4.0 before 3.0. The site uses numeric order.
+
+## Design (October 28, 2026 revision)
+
+- **Pathfinder layout.** The layout now follows the FYE 100 Pathfinder Guidebook:
+  - a running header with the guide title
+  - a chapter sidebar listing the chapter's pages and the sections of the current page
+  - breadcrumbs and a "Section N.N" kicker
+  - rest-stop dividers between major sections
+  - previous/next pills at the bottom of each page
+- **Callouts.** The solid gold callout boxes are now soft gold notes. The gold "Builds 8.x" chips are sky-blue capsules.
+- **No gold text on navy.** Number circles are a soft blue disc with a blue numeral. Labels on navy are white. The home page's eyebrow line uses a light sky tint.
+- **Light panels.** The "For Faculty" and "You Have Backup" panels are light blue instead of navy.
+- **Fewer lines:**
+  - Section headings use the Pathfinder highlight style instead of a gold underline.
+  - The gold band under each title is a single line of small text.
+  - Boxes no longer carry side or top accent bars. The one exception is the activity cards on the level pages, where the bar's shade still marks the level.
+  - List items have no divider lines.
+  - Tables use horizontal rules only.

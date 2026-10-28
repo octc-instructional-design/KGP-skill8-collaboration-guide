@@ -1,83 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Full Guide for Print – Designing Collaboration That Works</title>
-  <link rel="icon" type="image/png" sizes="48x48" href="images/icon-48.png">
-  <link rel="apple-touch-icon" href="images/icon-180.png">
-  <link rel="stylesheet" href="css/styles.css?v=1">
-  <link rel="stylesheet" href="css/guide.css?v=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Guide for Print | Designing Collaboration That Works</title>
+<link rel="icon" type="image/png" sizes="48x48" href="images/icon-48.png">
+<link rel="apple-touch-icon" href="images/icon-180.png">
+<link rel="stylesheet" href="css/styles.css?v=1">
+<link rel="stylesheet" href="css/guide.css?v=1">
+<script src="js/book.js?v=1" defer></script>
 </head>
 <body class="print-all">
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="site-header">
-    <div class="nav-shell">
-      <a class="logo-link" href="index.html" aria-label="Designing Collaboration That Works home">
-        <img src="images/kctcs-horiz-reverse.png" alt="Kentucky Community and Technical College System">
-      </a>
-      <nav class="site-links" aria-label="Site navigation">
-        <a href="index.html">HOME</a>
-        <a href="index.html#contents">CONTENTS</a>
-        <a href="https://octc-instructional-design.github.io/KGP-10essential-skills-guide/">ALL 10 SKILLS</a>
-      </nav>
-    </div>
-  </header>
-  <div class="print-brand" aria-hidden="true"><img src="images/kctcs-horiz-color.png" alt=""><span>Designing Collaboration That Works &middot; Essential Skill 8: Collaboration</span></div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <main id="main" class="chapter-page">
-    <div class="print-cover">
-      <img class="print-cover-logo" src="images/kctcs-vert-color.png" alt="Kentucky Community and Technical College System">
-      <h1>Designing Collaboration That Works</h1>
-      <p class="print-cover-sub">A Faculty Guide to Essential Skill 8: Collaborate and Work in Teams</p>
-      <p class="print-cover-note">Kentucky Graduate Profile &middot; Kentucky Council on Postsecondary Education<br>Developed by the KCTCS Online Learning Peer Team</p>
-    </div>
-    <div class="print-toolbar">
-      <p id="print-status" role="status">Loading all sections&hellip;</p>
-      <button type="button" class="primary-button" id="print-go" disabled>Print or save as PDF</button>
-    </div>
-    <noscript><p>This page assembles every section for printing and needs JavaScript. Each section can also be printed from its own page.</p></noscript>
-    <div id="print-body"></div>
-  </main>
-  <script>
-  (function () {
-    var pages = ["pages/1-0-start-here.html", "pages/2-0-facilitating-group-work.html", "pages/3-0-four-indicators.html", "pages/3-1-contributing-to-team-goals.html", "pages/3-2-communication-and-feedback.html", "pages/3-3-roles-and-responsibilities.html", "pages/3-4-adaptability-and-trust.html", "pages/4-0-choosing-your-approach.html", "pages/4-1-quick-collaboration.html", "pages/4-2-structured-collaboration.html", "pages/4-3-coordinated-collaboration.html", "pages/4-4-sustained-team-project.html", "pages/5-0-design-your-assessment.html", "pages/6-0-build-your-rubric.html", "pages/7-0-group-work-tools.html", "pages/7-1-collaboration-profile-survey.html", "pages/7-2-disagreement-self-check.html", "pages/7-3-group-contract.html", "pages/7-4-peer-evaluation.html", "pages/8-0-technology-tools.html", "pages/8-1-blackboard.html", "pages/8-2-microsoft-teams.html", "pages/9-0-examples.html", "pages/9-1-quick-idea-bank.html", "pages/9-2-structured-idea-bank.html", "pages/9-3-coordinated-idea-bank.html", "pages/9-4-gly111-site-investigation.html", "pages/9-5-com252-interpersonal-communication.html", "pages/10-0-from-your-colleagues.html"];
-    var out = document.getElementById('print-body');
-    var status = document.getElementById('print-status');
-    var btn = document.getElementById('print-go');
-    Promise.all(pages.map(function (p) {
-      return fetch(p).then(function (r) { if (!r.ok) throw new Error(p); return r.text(); });
-    })).then(function (docs) {
-      docs.forEach(function (txt, i) {
-        var d = new DOMParser().parseFromString(txt, 'text/html');
-        var sec = document.createElement('section');
-        sec.className = 'print-section ' + (d.body.className || '');
-        ['.indicator-heading', '.page-meta', '.guide-content'].forEach(function (sel) {
-          var el = d.querySelector(sel); if (el) sec.appendChild(document.importNode(el, true));
-        });
-        sec.querySelectorAll('a[href]').forEach(function (a) {
-          var h = a.getAttribute('href');
-          if (!/^(https?:|mailto:|#)/.test(h)) a.setAttribute('href', 'pages/' + h);
-        });
-        sec.querySelectorAll('img[src^="../"]').forEach(function (im) { im.src = im.getAttribute('src').slice(3); });
-        out.appendChild(sec);
+<header class="bookbar">
+  <div class="inner">
+    <a class="brand" href="index.html" aria-label="Designing Collaboration That Works home">
+      <img class="logo logo-full" src="images/kctcs-horiz-reverse.png" alt="Kentucky Community and Technical College System" width="1259" height="260">
+      <span class="brand-text">
+        <span class="book">Designing Collaboration<span class="long"> That Works · Skill 8</span></span>
+      </span>
+    </a>
+    <nav class="bar-nav" aria-label="Book">
+      <a class="bar-btn" href="index.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg><span class="bar-lbl">Home</span></a>
+      <a class="bar-btn" href="https://octc-instructional-design.github.io/KGP-10essential-skills-guide/"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="12" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="12" cy="12" r="2.5"/><circle cx="18" cy="12" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="12" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/></svg><span class="bar-lbl">All 10 Skills</span><span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="contents-btn" href="index.html#contents"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span><span class="long">Guide </span>Contents</span></a>
+    </nav>
+  </div>
+</header>
+<div class="print-brand" aria-hidden="true"><img src="images/kctcs-horiz-color.png" alt=""><span>Designing Collaboration That Works · Essential Skill 8: Collaboration</span></div>
+
+<main id="main" class="print-main">
+  <div class="print-cover">
+    <img class="print-cover-logo" src="images/kctcs-vert-color.png" alt="Kentucky Community and Technical College System">
+    <h1>Designing Collaboration That Works</h1>
+    <p class="print-cover-sub">A Faculty Guide to Essential Skill 8: Collaborate and Work in Teams</p>
+    <p class="print-cover-note">Kentucky Graduate Profile · Kentucky Council on Postsecondary Education<br>Developed by the KCTCS Online Learning Peer Team</p>
+  </div>
+  <div class="print-toolbar">
+    <p id="print-status" role="status">Loading all sections…</p>
+    <button type="button" class="start-btn" id="print-go" disabled>Print or save as PDF</button>
+  </div>
+  <noscript><p>This page assembles every section for printing and needs JavaScript. Each section can also be printed from its own page.</p></noscript>
+  <div id="print-body"></div>
+</main>
+<script>
+(function () {
+  var pages = ["pages/1-0-start-here.html", "pages/2-0-facilitating-group-work.html", "pages/3-0-four-indicators.html", "pages/3-1-contributing-to-team-goals.html", "pages/3-2-communication-and-feedback.html", "pages/3-3-roles-and-responsibilities.html", "pages/3-4-adaptability-and-trust.html", "pages/4-0-choosing-your-approach.html", "pages/4-1-quick-collaboration.html", "pages/4-2-structured-collaboration.html", "pages/4-3-coordinated-collaboration.html", "pages/4-4-sustained-team-project.html", "pages/5-0-design-your-assessment.html", "pages/6-0-build-your-rubric.html", "pages/7-0-group-work-tools.html", "pages/7-1-collaboration-profile-survey.html", "pages/7-2-disagreement-self-check.html", "pages/7-3-group-contract.html", "pages/7-4-peer-evaluation.html", "pages/8-0-technology-tools.html", "pages/8-1-blackboard.html", "pages/8-2-microsoft-teams.html", "pages/9-0-examples.html", "pages/9-1-quick-idea-bank.html", "pages/9-2-structured-idea-bank.html", "pages/9-3-coordinated-idea-bank.html", "pages/9-4-gly111-site-investigation.html", "pages/9-5-com252-interpersonal-communication.html", "pages/10-0-from-your-colleagues.html"];
+  var out = document.getElementById('print-body');
+  var status = document.getElementById('print-status');
+  var btn = document.getElementById('print-go');
+  Promise.all(pages.map(function (p) {
+    return fetch(p).then(function (r) { if (!r.ok) throw new Error(p); return r.text(); });
+  })).then(function (docs) {
+    docs.forEach(function (txt) {
+      var d = new DOMParser().parseFromString(txt, 'text/html');
+      var sec = document.createElement('section');
+      sec.className = 'print-section ' + (d.body.className || '');
+      d.querySelectorAll('.reading > .row').forEach(function (row) {
+        if (!row.querySelector('.pagenav')) sec.appendChild(document.importNode(row, true));
       });
-      status.textContent = 'All ' + docs.length + ' sections loaded.';
-      btn.disabled = false;
-    }).catch(function (e) {
-      status.textContent = 'A section could not be loaded (' + e.message + '). If you opened this file directly from your computer, view it on the published site instead.';
+      sec.querySelectorAll('a[href]').forEach(function (a) {
+        var h = a.getAttribute('href');
+        if (!/^(https?:|mailto:|#)/.test(h)) a.setAttribute('href', 'pages/' + h);
+      });
+      sec.querySelectorAll('img[src^="../"]').forEach(function (im) { im.src = im.getAttribute('src').slice(3); });
+      out.appendChild(sec);
     });
-    btn.addEventListener('click', function () { window.print(); });
-  })();
-  </script>
+    status.textContent = 'All ' + docs.length + ' sections loaded.';
+    btn.disabled = false;
+  }).catch(function (e) {
+    status.textContent = 'A section could not be loaded (' + e.message + '). If you opened this file directly from your computer, view it on the published site instead.';
+  });
+  btn.addEventListener('click', function () { window.print(); });
+})();
+</script>
 
-  <footer class="site-footer">
-    <div class="footer-shell">
-      <img src="images/kctcs-horiz-reverse.png" alt="Kentucky Community and Technical College System">
-      <p>Designing Collaboration That Works <span>•</span> Essential Skill 8 <span>•</span> Version 1.0 <span>•</span> 2026</p>
-      <p>Content licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></p>
-    </div>
-    <div class="eeo-shell"><p class="eeo">The Kentucky Community and Technical College System is an equal educational and employment opportunity institution and does not discriminate on the basis of race, religion, color, sex, gender identity, gender presentation, national origin, age, disability, family medical history, or genetic information. Further, we vigilantly prevent discrimination based on sexual orientation, parental status, marital status, political affiliation, military service, or any other non-merit based factor.</p></div>
-  </footer>
+<footer>
+  <div class="inner">
+    <span>Designing Collaboration That Works · Essential Skill 8 · Kentucky Graduate Profile</span>
+    <span>Content licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0<span class="sr-only"> (opens in a new tab)</span></a></span>
+  </div>
+  <div class="inner">
+    <p class="eeo">The Kentucky Community and Technical College System is an equal educational and employment opportunity institution and does not discriminate on the basis of race, religion, color, sex, gender identity, gender presentation, national origin, age, disability, family medical history, or genetic information. Further, we vigilantly prevent discrimination based on sexual orientation, parental status, marital status, political affiliation, military service, or any other non-merit based factor.</p>
+  </div>
+</footer>
 </body>
 </html>
