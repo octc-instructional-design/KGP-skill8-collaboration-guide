@@ -21,7 +21,7 @@ The guide is part of the [Essential Skills Faculty Guide](https://octc-instructi
 | 7.0 | Group Work Tools | 7.1 survey · 7.2 self-check · 7.3 contract · 7.4 peer evaluation |
 | 8.0 | Technology Tools | 8.1 Blackboard · 8.2 Microsoft Teams |
 | 9.0 | Examples | 9.1–9.3 idea banks · 9.4 GLY 111 · 9.5 COM 252 exemplars |
-| 10.0 | From Your Colleagues | placeholder for contributed activities |
+| 10.0 | From Your Colleagues | six faculty-contributed projects as PDF packets |
 
 `print.html` assembles every section into one document. Use it to print or save the whole guide as a PDF. Any single page also prints cleanly on its own.
 
@@ -35,6 +35,7 @@ css/styles.css  book layout shared with the FYE 100 Pathfinder Guidebook
 css/guide.css   this guide's additions and content components
 js/book.js      sidebar behavior, section highlighting, new-tab external links
 images/         logos, the Skill 8 coin, and favicons
+files/colleagues/  PDF packets for 10.0 From Your Colleagues
 CHANGES.md      what changed from the Blackboard version
 ```
 

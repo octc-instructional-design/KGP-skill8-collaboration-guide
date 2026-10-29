@@ -1073,6 +1073,19 @@ footer a {
   gap: 4px;
 }
 
+/* 10.0 colleague packets: capsule in the top-right corner, level color on the meter */
+.guide-content .colleague-list { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 20px; }
+.guide-content .colleague-card { position: relative; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px 18px; margin: 0; }
+.guide-content .colleague-card .cc-cap { position: absolute; top: 14px; right: 16px; margin: 0; font-size: .72rem; font-weight: 800; letter-spacing: .1em;
+  padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); }
+.guide-content .colleague-card .cc-course { margin: 0 70px 4px 0; font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-ink); }
+.guide-content .colleague-card h3 { margin: 0 70px 8px 0; }
+.guide-content .colleague-card p { margin: 0 0 10px; }
+.guide-content .colleague-card .cc-level { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: .9rem; color: var(--muted); }
+.guide-content .colleague-card .cc-level .level-meter { margin-right: 4px; }
+.guide-content .colleague-card .cc-dl { margin: 0; font-weight: 700; }
+.guide-content .credit-line { color: var(--muted); font-size: .95rem; }
+
 
 /* =========================================================
    Part D. Vertical rhythm

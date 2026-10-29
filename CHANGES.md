@@ -43,7 +43,7 @@ This site was converted from the Blackboard organization **"10ES Collaboration W
 
 - **Home page.** Title, subtitle, and introduction are adapted from the cover of the Fall 2026 review booklet. Chapter descriptions are taken from the booklet's contents page.
 - **Chapter overview pages for 7.0, 8.0, and 9.0.** Blackboard had folders here, not pages. Each overview has a one-paragraph introduction drawn from the pages it introduces.
-- **10.0 From Your Colleagues.** A placeholder page that links to the CPE resource repository. The colleague-contributed projects in the Blackboard org were not carried over.
+- **10.0 From Your Colleagues.** The page now lists six colleague projects as PDF packets (see the October 29 entry below). It also links to the CPE resource repository.
 
 ## Accessibility and structure
 
@@ -97,3 +97,47 @@ This site was converted from the Blackboard organization **"10ES Collaboration W
 - The footer now reads "Draft for review · © 2026 KCTCS."
 - The home page's "Use and adapt it" box is replaced with a Status note.
 - The README explains that reuse beyond KCTCS hasn't been decided, and names who decides under KCTCS Administrative Policy 3.3.5.
+
+## Colleague project packets (October 29, 2026)
+
+The six projects in the Blackboard org's colleague area are now PDF packets in `files/colleagues/`, listed on 10.0. They were contributed by Sherri Basil and adapted with her permission.
+
+**How they're built**
+- Each packet opens with a cover page: summary, course, length, team size, format, final product, and the closest level on the guide's scale. The level is an editorial match to 4.0. It wasn't part of the original materials.
+- Faculty notes come first. Each student-facing section starts on a new page so it can be printed or copied into Blackboard on its own. A "For faculty" or "For students" capsule marks every section.
+- The PDFs are tagged:
+  - real headings and lists
+  - table header cells
+  - a bookmark outline
+  - document title and language
+  - logo alt text, with the decorative coin marked as an artifact
+
+  The source pages pass axe-core with no violations.
+
+**Edits made in every packet**
+- Typos fixed: "Ceremonial," "Preparation," "preferred," "etc.," "choose," "set up."
+- The skill name is standardized to "Essential Skill 8: Collaborate and Work in Teams." It had appeared as "KCTCS Essential Skill #8" and "Collaboration & Teamwork."
+- Links to the contributor's OneDrive and SharePoint files were removed, because readers outside her account can't open them. Two of these were "Writing Performance-Based Assessments" and "Essential Skill 8 Assessment & LOMs." The third was the "Asynchronous Group Project Design Template," which is now named in the text without a link.
+- Blackboard dividers, the empty headings, and the emoji check marks were removed.
+
+**Edits by packet**
+
+| Packet | Change |
+|---|---|
+| COM 181 Special Occasion | Stage 1 described the project as a "Collaborative Case Study" with a written analysis or memo. It now says "collaborative performance task" with a team presentation. That wording was left over from a template. |
+| COM 181 Special Occasion | The repeated Week 1 opening paragraph now appears once and has been rewritten. The "(Insert Essential Skill 8)" placeholder is now an instruction. |
+| COM 181 Special Occasion | Sentence fragments were completed: "the team goal and the type of [presentation]" and "students should research, for the presentation." The dangling "Document for how to record and share in Teams" now links to 8.2. |
+| COM 181 Special Occasion | The competency list is numbered, so "Competency 2 and 5" point to the right items. |
+| COM 181 Special Occasion | The discussion prompt's wording was fixed, so it now reads "reply … with how you might have handled the situation." The rubric appears once, under Discussion 1. The journal has a note saying it uses the same rubric. |
+| Community Advocacy | The team-planning block appeared on three pages. It's removed from "The Assignment" and kept in the faculty components and Week 2. The stray "The type of finished project" is now a Shared Goals item. |
+| Community Advocacy | The two empty Blackboard pages ("How to create groups in Blackboard / in Teams") were dropped. In their place, the faculty section points to 8.1, 8.2, and Blackboard's Group Assignments help. |
+| Peer Review Workshop | The screenshot showed parallel grading ("2 graders per student"), which turns peer review **off** in Blackboard. It's replaced with written setup steps: turn on Peer review, leave parallel grading off, and a link to Blackboard's peer review help. |
+| Persuasive Speech | "Tools Needed" is retitled "Overview and Setup." An empty list item was removed. |
+| Geology | "(Discussion Created)" now points to the Group Discussion Prompt. The prompt's sub-questions are nested correctly. |
+| GLY 110 | "Sample Announcement to Students" held the faculty Essential Skill 8 statement, so it's retitled "Suggested Essential Skill 8 Statement." |
+
+**Left for the contributor to decide (not changed)**
+- Persuasive Speech, Part 2: the example "Social media causes more harm than good" is classified as a question of **fact**. "More harm than good" is usually taught as a **value** judgment.
+- Collaboration Survey: the availability choices skip 4–8 pm on weekdays.
+- COM 181 journal: "Frequency: Daily" for a six-week project.
+- Persuasive Speech, Part 4 has faculty notes only. There's no student version.
